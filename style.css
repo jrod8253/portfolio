@@ -65,7 +65,6 @@ body {
   background-image: url(./img/hide-obara-z6lvPG4Oj4c-unsplash.jpg);
   background-size: cover;
   background-position-y: 25%;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -93,6 +92,7 @@ body {
   margin-bottom: 25px;
   font-size: 20px;
   color: rgba(255, 255, 255, 0.6);
+  font-weight: 400;
 }
 
 .about-intro-content > h1 {
@@ -122,11 +122,12 @@ body {
   border: 2px solid #FDB827;
   padding: 10px 24px;
   border-radius: 50px;
-  font-weight: 800;
+  font-weight: 500;
   font-size: 18px;
   opacity: 0.7;
-  transition: opacity 0.3s ease;
   text-decoration: none;
+  transition: 0.3s ease-in-out;
+  letter-spacing: 0.125em;
 }
 
 .btn-ghost:hover {
@@ -138,6 +139,7 @@ body {
   flex-direction: column;
   align-items: center;
   margin-bottom: 50px;
+  margin-top: 50px;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -151,7 +153,7 @@ body {
   width: 2px;
   height: 40px;
   margin: 10px auto;
-  background-color: #6D8B74;
+  background-color: #FDB827;
 }
 
 .about-me_heading {
@@ -190,6 +192,7 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   height: 60px;
+  width: 100%;
 }
 
 .tab button {
@@ -200,30 +203,52 @@ body {
   cursor: pointer;
   padding: 14px 16px;
   transition: 0.3s;
-  font-family:  'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   width: 100%;
   height: 100%;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: bolder;
 }
 
 .tab button:hover {
-  background-color: #5F7161;
+  background-color: #FFCE76;
   color: #fff;
 }
 
 .tab button.active {
-  background-color: #6D8B74;
+  background-color: #FDB827;
   color: #fff;
-}
-
-.tabcontent {
-  display: none;
-  padding: 6px 12px;
-  border: 1px solid #ccc;
-  border-top: none;
 }
 
 .all-tabs {
   text-align: center;
+  margin-top: 48px;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.tabcontent {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  min-height: 550px;
+}
+
+.about-tab_heading {
+  margin: 10px auto;
+  text-align: center;
+  font-size: 26px;
+  font-weight: 400;
+  color: #000;
+}
+
+.about-tab_paragraph {
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  width: 90%;
+  margin: 25px auto;
+  color: #1a1f27;
+  font-family: "Open Sans", sans-serif;
 }
