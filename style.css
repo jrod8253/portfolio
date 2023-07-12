@@ -14,7 +14,7 @@ body {
 
 .navbar {
   width: 100vw;
-  height: 85px;
+  height: 66px;
   position: fixed;
   top: 0;
   left: 0;
@@ -62,39 +62,52 @@ body {
 .about-intro {
   width: 100vw;
   height: 100vh;
-  min-height: 625px;
+  background-image: url(./img/hide-obara-z6lvPG4Oj4c-unsplash.jpg);
+  background-size: cover;
+  background-position-y: 25%;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 2;
-  max-height: 2000px;
-  background-color: #5F7161;
+}
+
+.about-intro_overlay {
+  background-color: #1a1f27;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.8;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
 }
 
 .about-intro-content {
   position: relative;
   text-align: center;
   font-family: 'Montserrat', sans-serif;
+  z-index: 2;
 }
 
 .about-intro-content > h4 {
   margin-bottom: 25px;
   font-size: 20px;
-  color: rgba(0, 0, 0, 0.75);
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .about-intro-content > h1 {
   margin-bottom: 25px;
   font-size: 72px;
   font-weight: bold;
+  color:#fff;
 }
 
 .about-intro-content > p {
   margin: 35px 40px;
   font-size: 18px;
   font-family: "Open Sans", sans-serif;
-  max-width: 700px;
-  color: rgba(0, 0, 0, 0.75);
+  max-width: 800px;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .about-intro-button {
@@ -105,12 +118,13 @@ body {
 }
 
 .btn-ghost {
-  color: #4A4A4A;
-  border: 1px solid #4A4A4A;
+  color: #FDB827;
+  border: 2px solid #FDB827;
   padding: 10px 24px;
   border-radius: 50px;
-  font-weight: lighter;
-  opacity: 0.6;
+  font-weight: 800;
+  font-size: 18px;
+  opacity: 0.7;
   transition: opacity 0.3s ease;
   text-decoration: none;
 }
