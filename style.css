@@ -13,6 +13,10 @@ body {
 
 html {scroll-behavior: smooth;}
 
+.background-gray {
+  background-color: #F1F1F1;
+}
+
 .navbar {
   width: 100vw;
   height: 66px;
@@ -143,8 +147,8 @@ html {scroll-behavior: smooth;}
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 50px;
-  margin-top: 50px;
+  padding-bottom: 50px;
+  padding-top: 50px;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -198,6 +202,7 @@ html {scroll-behavior: smooth;}
   grid-template-columns: repeat(3, 1fr);
   height: 60px;
   width: 100%;
+  border-radius: 0.5em;
 }
 
 .tab button {
@@ -237,7 +242,7 @@ html {scroll-behavior: smooth;}
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
-  min-height: 550px;
+  min-height: 700px;
 }
 
 .about-tab_heading {
@@ -352,4 +357,28 @@ html {scroll-behavior: smooth;}
 .experience-tab_group-content_paragraph > span {
   font-weight: 700;
   color: rgba(0, 0, 0, 0.6);
+}
+
+.my-work {
+  width: 100vw;
+  height: auto;
+  padding-bottom: 60px;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 90%;
+  max-width: 1180px;
+  gap: 60px;
+  margin: 0 auto 60px auto;
+}
+
+.portfolio-card {
+  width: 100%;
+  height: 175px;
+  border-radius: 1em;
+  background-color: #fff;
+  cursor: pointer;
+  position: relative;
 }
