@@ -68,7 +68,7 @@
               <br>
               <br>
               Through my experience in cross-functional teams, data analysis, and process improvement, I have developed a solid foundation for delivering exceptional results. As an enthusiastic and adaptable individual, I'm excited to dive into the world of software development and make a meaningful impact as an entry-level developer.</p>
-            <a href="./assests/Jared_Champayne_Resume_07-2023-compressed_1.pdf" class="btn resume-btn" target="_blank">DOWNLOAD RESUME</a>
+            <a href="./assests/Jared_Champayne_Resume_07-2023-compressed_1.pdf" class="btn resume-btn" target="_blank">DOWNLOAD RESUME <i class="fa-solid fa-download"></i></a>
           </div>
           <!-- Skills -->
           <div id="Skills" class="tabcontent">
@@ -195,26 +195,40 @@
         </dialog>
     </div>
 
+    <!-- Contact Me -->
+    <div class="my-work background-darkgray" id="contact">
+      <div class="about-me_title">
+        <div class="about-me_icon">
+          <i class="fa-regular fa-envelope fa-2xl" style="color: rgba(255, 255, 255, 0.75);"></i>
+        </div>
+        <div class="about-me_line"></div>
+        <h2 class="contact-me_heading">Get In Touch</h2>
+        <div class="contact-me_paragraph">Send me a note and I'll get in in touch soon!</div>
+      </div>
 
-    <section class="section" id="contact">
-      <form action="https://formspree.io/f/mnqknaop" method="POST">
-      <label>
-        Your Name:
-        <input type="phone" name="name">
-      </label>
-      <label>
-        Your email:
-        <input type="email" name="email">
-      </label>
-      <label>
-        Your message:
-        <textarea name="message"></textarea>
-      </label>
-      <!-- your other form fields go here -->
-      <button type="submit">Send</button>
-    </form>
+      <form class="contact-me-form" action="https://formspree.io/f/mnqknaop" method="POST">
+        <div class="contact-me-form_group">
+          <label>Your Name</label>
+          <input name="name" placeholder="Bruce Banner">
+        </div>
+        <div class="contact-me-form_group">
+          <label>Your Email</label>
+          <input type="email" name="email" placeholder="the_hulk@marvel.com">
+        </div>
+        <div class="contact-me-form_group">
+          <label>Your Message</label>
+          <textarea name="message" placeholder="Tell me a story..."></textarea>
+        </div>
+        <div class="contact-me-form_group">
+          <button class="btn submit-btn" type="submit">SEND MESSAGE <i class="fa-regular fa-paper-plane"></i></button>
+        </div>
+      </form>
+    </div>
 
-    </section>
+    <footer class="footer">
+      <a href="#home" class="resume-btn">BACK TO TOP  <i class="fa-solid fa-arrow-turn-up"></i></a>
+      <p>© 2023 Jared Champayne. All rights reserved.</p>
+    </footer>
 
     <!-- My JS -->
     <script src="./js/main.js"></script>
