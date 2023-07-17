@@ -17,6 +17,10 @@ html {scroll-behavior: smooth;}
   background-color: #F1F1F1;
 }
 
+.background-darkgray {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
 .navbar {
   width: 100vw;
   height: 66px;
@@ -62,6 +66,8 @@ html {scroll-behavior: smooth;}
   letter-spacing: .125em;
   position: relative;
   text-decoration: none;
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 500;
 }
 
 .navbar_list-item:nth-child(n + 2) {
@@ -426,4 +432,102 @@ dialog::backdrop {
   position: absolute;
   bottom: 0;
   padding: 1em;
+}
+
+/* CONTACT ME */
+
+.contact-me_heading {
+  font-size: 28px;
+  margin-bottom: 25px;
+  font-weight: 500;
+  text-align: center;
+  color: #fff;
+}
+
+.contact-me_paragraph {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Open Sans", sans-serif;
+  color: rgba(255, 255, 255, 0.75);
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  line-height: 1.5rem;
+}
+
+.contact-me-form {
+  width: 90%;
+  max-width: 625px;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0 auto;
+}
+
+.contact-me-form_group {
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.contact-me-form_group > label {
+  padding-bottom: 15px;
+}
+
+.contact-me-form_group > input {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #000;
+  font-size: 16px;
+  height: 50px;
+  padding-left: 5px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.contact-me-form_group > textarea {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #000;
+  font-size: 16px;
+  height: 200px;
+  padding-left: 5px;
+  font-family: 'Montserrat', sans-serif;
+  padding-top: 5px;
+}
+
+.contact-me-form_group > button {
+  margin-top: 30px;
+}
+
+.submit-btn {
+  background-color: #FDB827;
+  color: #fff;
+  border: 2px solid #FDB827;
+  padding: 10px 24px;
+  border-radius: 50px;
+  font-weight: 500;
+  font-size: 18px;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+  letter-spacing: 0.125em;
+  cursor: pointer;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.submit-btn:hover {
+  opacity: 0.8;
+}
+
+/* FOOTER */
+.footer {
+  font-family: 'Montserrat', sans-serif;
+  padding: 60px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.75);
+}
+
+.footer > a {
+  margin-bottom: 20px;
 }
