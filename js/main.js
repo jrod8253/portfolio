@@ -24,45 +24,28 @@ document.getElementById("defaultOpen").click();
 
 // Modals
 
-// Get the modal
-var modalparent = document.getElementsByClassName("modal_multi");
-// Get the button that opens the modal
-var modal_btn_multi = document.getElementsByClassName("myBtn_multi");
-// Get the <span> element that closes the modal
-var span_close_multi = document.getElementsByClassName("close_multi");
+const openBtns = document.querySelectorAll(".openBtn");
 
-// When the user clicks the button, open the modal
-function setDataIndex() {
+openBtns.forEach((btn) => {
+  btn.addEventListener("click", (event) => {
+    const dialogId = event.target.dataset.dialogId;
+    const dialog = document.getElementById(dialogId);
+    dialog.showModal();
+  });
+});
 
-    for (i = 0; i < modal_btn_multi.length; i++)
-    {
-        modal_btn_multi[i].setAttribute('data-index', i);
-        modalparent[i].setAttribute('data-index', i);
-        span_close_multi[i].setAttribute('data-index', i);
-    }
-}
+const dialogs = document.querySelectorAll("dialog");
 
-for (i = 0; i < modal_btn_multi.length; i++)
-{
-    modal_btn_multi[i].onclick = function() {
-        var ElementIndex = this.getAttribute('data-index');
-        modalparent[ElementIndex].style.display = "block";
-    };
+dialogs.forEach((dialog) => {
+  const closeBtn = dialog.querySelector(".closeBtn");
 
-    // When the user clicks on <span> (x), close the modal
-    span_close_multi[i].onclick = function() {
-        var ElementIndex = this.getAttribute('data-index');
-        modalparent[ElementIndex].style.display = "none";
-    };
+  if (closeBtn) {
+    closeBtn.addEventListener("click", () => {
+      dialog.close();
+    });
+  }
 
-}
-
-window.onload = function() {
-    setDataIndex();
-};
-
-window.onclick = function(event) {
-    if (event.target === modalparent[event.target.getAttribute('data-index')]) {
-        modalparent[event.target.getAttribute('data-index')].style.display = "none";
-    }
-  };
+  dialog.addEventListener("cancel", () => {
+    dialog.close();
+  });
+});
