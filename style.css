@@ -399,7 +399,7 @@ dialog::backdrop {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-width: 700px;
+  min-width: 850px;
   width: 80%;
   height: 80%;
   border-radius: 1em;
@@ -410,37 +410,133 @@ dialog::backdrop {
   align-items: center;
   justify-content: space-between;
   font-family: 'Montserrat', sans-serif;
-  margin: 1em;
+  width: 90%;
+  margin: 30px auto;
   border-bottom: 1px solid #ccc;
 }
 
-.modal-header-content > h4 {
-  font-size: 18px;
+.modal-header-content > h3 {
+  font-size: 24px;
+  font-weight: 700;
 }
 
 .modal-header-content > p {
-  font-size: 14px;
-  margin: 5px 0;
-  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  margin: 15px 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.openBtn {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  transition: 0.3s ease-in-out;
+}
+
+.openBtn:hover {
+  background-color: #FDB827;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.closeBtn:hover {
+  transform: scale(1.1);
 }
 
 .modal-body {
-  padding: 1em;
+  display: flex;
+  justify-content: space-between;
 }
 
-.modal-footer {
+.modal-body-content {
+  max-width: 35%;
+  font-family: 'Montserrat', sans-serif;
+  margin-left: 70px;
+}
+
+.modal-body-content > h4 {
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.modal-body-content > p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.75);
+  line-height: 1.5rem;
+  margin-bottom: 20px ;
+}
+
+.modal-body-graphic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+}
+
+.btn-github{
+  color: #FDB827;
+  border: 2px solid #FDB827;
+  padding: 10px 24px;
+  border-radius: 50px;
+  font-weight: 500;
+  font-size: 18px;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+  letter-spacing: 0.125em;
+  background-color: #fff;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.btn-github:hover {
+  background-color: #FDB827;
+  color: #fff;
+}
+
+.modal-body_tech-used {
+  font-family: 'Montserrat', sans-serif;
   position: absolute;
-  bottom: 0;
-  padding: 1em;
+  bottom: 30px;
+  left: 70px;
+  max-width: 40%;
+}
+
+.modal-body_tech-used > h4 {
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.modal-body_tech-used-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.modal-body_tech-used-skills > p {
+  border: 1px solid #000;
+  border-radius: 13px;
+  padding: 2px 10px;
+  margin-right: 8px;
+  font-size: 12px;
 }
 
 /* MODAL SLIDESHOW */
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 300px;
+  max-width: 600px;
   position: relative;
-  margin: auto;
+  margin-inline: 40px;
+  min-height: 450px;
 }
 
 /* Hide the images by default */
@@ -456,7 +552,7 @@ dialog::backdrop {
   width: auto;
   margin-top: -22px;
   padding: 16px;
-  color: white;
+  color: #FDB827;
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
@@ -477,22 +573,14 @@ dialog::backdrop {
 
 /* Caption text */
 .text {
-  color: #f2f2f2;
+  color: rgba(0, 0, 0, 0.75);
   font-size: 15px;
   padding: 8px 12px;
   position: absolute;
   bottom: 8px;
   width: 100%;
   text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* The dots/bullets/indicators */
@@ -504,11 +592,13 @@ dialog::backdrop {
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
+  position: relative;
+  bottom: 90px;
   transition: background-color 0.6s ease;
 }
 
 .active, .dot:hover {
-  background-color: #717171;
+  background-color: #444444;
 }
 
 /* Fading animation */
