@@ -21,6 +21,10 @@ html {scroll-behavior: smooth;}
   background-color: rgba(0, 0, 0, 0.8);
 }
 
+/* ////////////
+///NAVBAR///
+//////////// */
+
 .navbar {
   width: 100vw;
   height: 66px;
@@ -78,6 +82,23 @@ html {scroll-behavior: smooth;}
   border-bottom: 2px solid #FDB827;
   transition: 0.3s ease-in-out;
 }
+
+.navbar_list-item {
+  list-style: none;
+}
+
+.navbar_toggle-button {
+  background-color: #FDB827;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* ////////////
+ABOUT INTRO
+//////////// */
 
 .about-intro {
   width: 100vw;
@@ -197,7 +218,7 @@ html {scroll-behavior: smooth;}
 .about-me_tabs {
   width: 90%;
   max-width: 1100px;
-  margin: 0 auto;
+  margin: 25px auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -323,6 +344,8 @@ html {scroll-behavior: smooth;}
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
   display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
 }
 .skills-tab_group-content-skills > p {
   border: 1px solid #000;
@@ -626,6 +649,10 @@ dialog::backdrop {
 
 /* Styles for viewports with width less than 600px (Mobile) */
 @media (max-width: 599px) {
+  .about-intro-content > h1 {
+    font-size: 60px;
+  }
+
   /* Dialog backdrop */
   dialog::backdrop {
     background-color: rgba(0, 0, 0, 0.75);
@@ -810,7 +837,6 @@ dialog::backdrop {
   transition: 0.3s ease-in-out;
   letter-spacing: 0.125em;
   cursor: pointer;
-  width: 50%;
   margin: 0 auto;
 }
 
@@ -830,4 +856,61 @@ dialog::backdrop {
 
 .footer > a {
   margin-bottom: 20px;
+}
+
+/* Hide regular navbar list on small screens */
+@media (max-width: 600px) {
+  .navbar_list {
+    display: none;
+  }
+
+  /* Show the toggle button */
+  .navbar_toggle-button {
+    display: block;
+    width: 50px;
+  }
+
+  /* Hide the dropdown menu initially */
+  .navbar_dropdown {
+    display: none;
+  }
+
+  .dropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    position: fixed;
+    top: 7px;
+    right: 10px;
+  }
+
+  /* Show the dropdown menu when the button is clicked */
+  .navbar_dropdown.show {
+    display: block;
+    overflow: visible;
+    background-color: #fff;
+  }
+
+  .navbar_list-item:nth-child(n + 1) {
+    margin-inline: 5px;
+
+    margin-block: 5px;
+  }
+}
+
+/* Show regular navbar list on larger screens */
+@media screen and (min-width: 601px) {
+  .navbar_list {
+    display: flex;
+  }
+
+  /* Hide the toggle button */
+  .navbar_toggle-button {
+    display: none;
+  }
+
+  /* Hide the dropdown menu */
+  .navbar_dropdown {
+    display: none;
+  }
 }
