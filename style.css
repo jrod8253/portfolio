@@ -756,6 +756,13 @@ dialog::backdrop {
   .slideshow-container {
     min-height: 350px;
   }
+
+  .portfolio-grid {
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: none;
+    width: 50%;
+    gap: 50px;
+  }
   /* The rest of the styles remain the same */
 
 }
