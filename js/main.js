@@ -1,3 +1,7 @@
+/////////////
+////TABS/////
+/////////////
+
 function openSection(evt, sectionName) {
   // Declare all variables
   var i, tabcontent, tablinks;
@@ -54,11 +58,13 @@ dialogs.forEach((dialog) => {
 //////////////
 // SLIDESHOWS
 //////////////
-let slideIndex = [1,1];
+let slideIndex = [1,1,1];
 /* Class the members of each slideshow group with different CSS classes */
-let slideId = ["mySlides1", "mySlides2"]
+let slideId = ["mySlides1", "mySlides2", "mySlides3"]
 showSlides(1, 0);
 showSlides(1, 1);
+showSlides(1, 2);
+
 
 function plusSlides(n, no) {
   showSlides(slideIndex[no] += n, no);

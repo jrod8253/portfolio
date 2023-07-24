@@ -495,10 +495,16 @@ dialog::backdrop {
   background-color: #fff;
   margin-bottom: 20px;
   cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+
 }
 
 .btn-github:hover {
   background-color: #FDB827;
+  color: #fff;
+}
+
+.btn-github:hover .fa-brands.fa-github {
   color: #fff;
 }
 
@@ -611,6 +617,116 @@ dialog::backdrop {
   from {opacity: .4}
   to {opacity: 1}
 }
+
+/* Styles for viewports with width less than 600px (Mobile) */
+@media (max-width: 599px) {
+  /* Dialog backdrop */
+  dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+
+  /* Modal */
+  .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 80%;
+    border-radius: 1em;
+    /* Adjust min-width for smaller screens */
+    min-width: 300px;
+  }
+
+  .modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Montserrat', sans-serif;
+    width: 90%;
+    margin: 30px auto;
+    border-bottom: 1px solid #ccc;
+  }
+
+  /* Adjust font sizes and margins for smaller screens */
+  .modal-header-content > h3 {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .modal-header-content > p {
+    font-size: 14px;
+    margin: 10px 0;
+  }
+
+  .openBtn {
+    font-size: 16px;
+    /* Other styles as needed */
+  }
+
+  .modal-body {
+    /* Adjust layout for smaller screens */
+    display: block;
+  }
+
+  .modal {
+    /* Adjust min-width for smaller screens */
+    min-width: 250px;
+  }
+
+  .modal-body-content {
+    /* Adjust max-width and margin for smaller screens */
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .modal-body-content > h4 {
+    /* Adjust font-size and margins for smaller screens */
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  .modal-body-content > p {
+    /* Adjust font-size, line-height, and margins for smaller screens */
+    font-size: 12px;
+    line-height: 1.4rem;
+    margin-bottom: 10px;
+  }
+
+  .modal-body-graphic {
+    /* Adjust width for smaller screens */
+    width: 100%;
+  }
+
+  .btn-github {
+    /* Adjust font-size and padding for smaller screens */
+    font-size: 16px;
+    padding: 8px 18px;
+  }
+
+  .modal-body_tech-used {
+    /* Adjust max-width and margin for smaller screens */
+    max-width: 100%;
+    margin: 20px auto;
+    position: relative;
+    bottom: 0;
+    left: 0;
+
+  }
+
+  .modal-body_tech-used > h4 {
+    /* Adjust font-size and margins for smaller screens */
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  .slideshow-container {
+    min-height: 350px;
+  }
+  /* The rest of the styles remain the same */
+
+}
+
 
 /* CONTACT ME */
 
