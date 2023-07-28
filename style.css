@@ -175,6 +175,23 @@ ABOUT INTRO
   opacity: 1;
 }
 
+.about-intro_social-link {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-social {
+  color: #FDB827;
+  padding: 10px;
+  opacity: 0.7;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+
+.btn-social:hover {
+  opacity: 1;
+}
+
 .about-me_title {
   display: flex;
   flex-direction: column;
@@ -223,6 +240,12 @@ ABOUT INTRO
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.about-me_social-link {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
 }
 
 /* Tab style */
