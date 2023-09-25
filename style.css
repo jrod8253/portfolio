@@ -564,8 +564,7 @@ dialog::backdrop {
 .modal-body_tech-used {
   font-family: 'Montserrat', sans-serif;
   position: absolute;
-  bottom: 30px;
-  left: 70px;
+  top: auto;
   max-width: 40%;
 }
 
