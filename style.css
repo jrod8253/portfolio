@@ -74,6 +74,15 @@ html {scroll-behavior: smooth;}
   font-weight: 500;
 }
 
+.navbar_link_mobile {
+  font-size: 22px;
+  letter-spacing: .125em;
+  position: relative;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 500;
+}
+
 .navbar_list-item:nth-child(n + 2) {
   margin-left: 21px;
 }
@@ -428,8 +437,8 @@ ABOUT INTRO
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   width: 90%;
-  max-width: 1180px;
-  gap: 60px;
+  max-width: 780px;
+  gap: 45px;
   margin: 0 auto 60px auto;
 }
 
