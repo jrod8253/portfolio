@@ -118,6 +118,7 @@ ABOUT INTRO
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 8em;
 }
 
 .about-intro_overlay {
@@ -141,7 +142,6 @@ ABOUT INTRO
 
 .about-intro-content > h4 {
   margin-bottom: 25px;
-  margin-top: 100px;
   font-size: 20px;
   color: rgba(255, 255, 255, 0.6);
   font-weight: 400;
