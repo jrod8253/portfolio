@@ -137,7 +137,14 @@ ABOUT INTRO
   text-align: center;
   font-family: 'Montserrat', sans-serif;
   z-index: 2;
-  height: 100vh;
+  height: 80vh;
+}
+@media (max-width: 683px) {
+  .about-intro-content {
+    margin-top: 0em;
+    height: 85vh;
+  }
+
 }
 
 .about-intro-content > h4 {
@@ -164,7 +171,7 @@ ABOUT INTRO
 }
 
 .about-intro-button {
-  margin-bottom: 72px;
+  margin-bottom: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
