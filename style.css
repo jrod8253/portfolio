@@ -118,7 +118,6 @@ ABOUT INTRO
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 8em;
 }
 
 .about-intro_overlay {
@@ -133,7 +132,7 @@ ABOUT INTRO
 }
 
 .about-intro-content {
-  margin-top: 45px;
+  margin-top: 8em;
   position: relative;
   text-align: center;
   font-family: 'Montserrat', sans-serif;
