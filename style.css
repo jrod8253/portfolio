@@ -137,10 +137,12 @@ ABOUT INTRO
   text-align: center;
   font-family: 'Montserrat', sans-serif;
   z-index: 2;
+  height: 100vh;
 }
 
 .about-intro-content > h4 {
   margin-bottom: 25px;
+  margin-top: 25px;
   font-size: 20px;
   color: rgba(255, 255, 255, 0.6);
   font-weight: 400;
