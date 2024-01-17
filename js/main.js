@@ -108,3 +108,11 @@ document.addEventListener("DOMContentLoaded", function() {
     link.addEventListener("click", closeDropdownMenu);
   });
 });
+
+/////////////
+// PORTFOLIO
+/////////////
+
+document.addEventListener("DOMContentLoaded", function() {
+  
+});

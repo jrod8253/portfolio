@@ -436,11 +436,14 @@ ABOUT INTRO
   color: rgba(0, 0, 0, 0.6);
 }
 
+
+/* WORK */
 .my-work {
   width: 100vw;
   height: auto;
   padding-bottom: 60px;
 }
+
 
 .portfolio-grid {
   display: grid;
@@ -460,18 +463,128 @@ ABOUT INTRO
   position: relative;
 }
 
+/* LARGE GRID PROJECTS */
+
+.portfolio-grid-large {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 90%;
+  max-width: 1180px;
+  gap: 45px;
+  margin: 0 auto 60px auto;
+}
+
+.portfolio-card-large {
+  width: 100%;
+  height: 350px;
+  border-radius: 1em;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.portfolio-card-large:hover {
+  transform: scale(1.1);
+  transition: 0.5s ease-in-out;
+}
+
+.portfolio-card-large > a {
+  z-index: 1; /* Place the text above the background */
+  text-decoration: none;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 50px;
+  font-weight: 500;
+  position: relative;
+  text-decoration: none;
+}
+
+.portfolio-card-large > span {
+  z-index: 1; /* Place the text above the background */
+  text-decoration: none;
+  color: #dddddd;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  position: relative;
+  text-decoration: none;
+  padding-top: 10px;
+  width: 80%;
+}
+
+#waxworksCard {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.32);
+  background-image: url(./img/waxworks/ww_discover.png);
+}
+
+#clartezaCard {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.35);
+  background-image: url(./img/clarteza/clarteza-home.png);
+}
+
+#casayaCard {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.35);
+  background-image: url(./img/casaya/casaya_home.png);
+}
+
+#movieListCard {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.35);
+  background-image: url(./img/movie_list/ML_home.png);
+}
+
 /* Modals */
 dialog::backdrop {
   background-color: rgba(0, 0, 0, 0.75);
 }
 
 .modal {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin: 0 auto;
   min-width: 850px;
-  width: 80%;
+  width: 70%;
   height: 85%;
   border-radius: 1em;
 }
@@ -701,10 +814,7 @@ dialog::backdrop {
 
   /* Modal */
   .modal {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin: 0 auto;
     width: 90%;
     height: 80%;
     border-radius: 1em;
@@ -804,8 +914,31 @@ dialog::backdrop {
     width: 50%;
     gap: 50px;
   }
+
+
   /* The rest of the styles remain the same */
 
+}
+
+@media (max-width: 760px) {
+  .portfolio-grid-large {
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: none;
+    width: 50%;
+    gap: 50px;
+  }
+
+  .portfolio-card-large {
+    height: 250px;
+  }
+
+  .portfolio-card-large > a {
+    font-size: 30px;
+  }
+
+  .portfolio-card-large > span {
+    font-size: 14px;
+  }
 }
 
 
