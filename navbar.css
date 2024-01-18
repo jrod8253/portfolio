@@ -1,0 +1,144 @@
+/* ////////////
+///NAVBAR///
+//////////// */
+
+.navbar {
+  width: 100vw;
+  height: 66px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  transition: 0.3s ease-in-out;
+  z-index: 10;
+  background-color: #fff;
+}
+
+.navbar_content {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 1180px;
+}
+
+.navbar_name {
+  color: #000;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.25em;
+  text-decoration: none;
+}
+
+.navbar_name > span {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.navbar_list {
+  display: flex;
+  list-style: none;
+}
+
+.navbar_link {
+  font-size: 14px;
+  text-decoration: none;
+  letter-spacing: .125em;
+  position: relative;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 500;
+}
+
+.navbar_link_mobile {
+  font-size: 22px;
+  letter-spacing: .125em;
+  position: relative;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 500;
+}
+
+.navbar_list-item:nth-child(n + 2) {
+  margin-left: 21px;
+}
+
+.navbar_list-item:hover {
+  border-bottom: 2px solid #FDB827;
+  transition: 0.3s ease-in-out;
+}
+
+.navbar_list-item {
+  list-style: none;
+}
+
+.navbar_toggle-button {
+  background-color: #FDB827;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Hide regular navbar list on small screens */
+@media (max-width: 600px) {
+  .navbar_list {
+    display: none;
+  }
+
+  /* Show the toggle button */
+  .navbar_toggle-button {
+    display: block;
+    width: 50px;
+  }
+
+  /* Hide the dropdown menu initially */
+  .navbar_dropdown {
+    display: none;
+  }
+
+  .dropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    position: fixed;
+    top: 7px;
+    right: 10px;
+  }
+
+  /* Show the dropdown menu when the button is clicked */
+  .navbar_dropdown.show {
+    display: block;
+    padding: 30px;
+    background-color: #fff;
+    width: 100vw;
+    text-align: center;
+  }
+
+  .navbar_list-item:nth-child(n + 1) {
+    margin-inline: 20px;
+    border: #000 1px solid;
+    border-radius: 0.5em;
+    margin-block: 15px;
+  }
+}
+
+/* Show regular navbar list on larger screens */
+@media screen and (min-width: 601px) {
+  .navbar_list {
+    display: flex;
+  }
+
+  /* Hide the toggle button */
+  .navbar_toggle-button {
+    display: none;
+  }
+
+  /* Hide the dropdown menu */
+  .navbar_dropdown {
+    display: none;
+  }
+}
+

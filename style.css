@@ -22,90 +22,6 @@ html {scroll-behavior: smooth;}
 }
 
 /* ////////////
-///NAVBAR///
-//////////// */
-
-.navbar {
-  width: 100vw;
-  height: 66px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Montserrat', sans-serif;
-  transition: 0.3s ease-in-out;
-  z-index: 10;
-  background-color: #fff;
-}
-
-.navbar_content {
-  display: flex;
-  justify-content: space-between;
-  width: 90%;
-  max-width: 1180px;
-}
-
-.navbar_name {
-  color: #000;
-  font-weight: 700;
-  font-size: 20px;
-  letter-spacing: 0.25em;
-  text-decoration: none;
-}
-
-.navbar_name > span {
-  color: rgba(0, 0, 0, 0.6);
-}
-
-.navbar_list {
-  display: flex;
-  list-style: none;
-}
-
-.navbar_link {
-  font-size: 14px;
-  text-decoration: none;
-  letter-spacing: .125em;
-  position: relative;
-  text-decoration: none;
-  color: rgba(0, 0, 0, 0.6);
-  font-weight: 500;
-}
-
-.navbar_link_mobile {
-  font-size: 22px;
-  letter-spacing: .125em;
-  position: relative;
-  text-decoration: none;
-  color: rgba(0, 0, 0, 0.6);
-  font-weight: 500;
-}
-
-.navbar_list-item:nth-child(n + 2) {
-  margin-left: 21px;
-}
-
-.navbar_list-item:hover {
-  border-bottom: 2px solid #FDB827;
-  transition: 0.3s ease-in-out;
-}
-
-.navbar_list-item {
-  list-style: none;
-}
-
-.navbar_toggle-button {
-  background-color: #FDB827;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
-
-/* ////////////
 ABOUT INTRO
 //////////// */
 
@@ -160,6 +76,16 @@ ABOUT INTRO
   font-size: 72px;
   font-weight: bold;
   color:#fff;
+}
+
+.my-work-top > h1 {
+  margin-bottom: 25px;
+  font-size: 72px;
+  font-weight: bold;
+  color:#fff;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  margin-top: 65px;
 }
 
 .about-intro-content > p {
@@ -436,12 +362,8 @@ ABOUT INTRO
   color: rgba(0, 0, 0, 0.6);
 }
 
-.my-work {
-  width: 100vw;
-  height: auto;
-  padding-bottom: 60px;
-}
 
+/* WORK */
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -460,23 +382,133 @@ ABOUT INTRO
   position: relative;
 }
 
-/* Modals */
+/* LARGE GRID PROJECTS */
+
+.portfolio-grid-large {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 90%;
+  max-width: 1180px;
+  gap: 45px;
+  margin: 0 auto 60px auto;
+}
+
+.portfolio-card-large {
+  width: 100%;
+  height: 350px;
+  border-radius: 1em;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.portfolio-card-large:hover {
+  transform: scale(1.1);
+  transition: 0.5s ease-in-out;
+}
+
+.portfolio-card-large > a {
+  z-index: 1; /* Place the text above the background */
+  text-decoration: none;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 50px;
+  font-weight: 500;
+  position: relative;
+  text-decoration: none;
+}
+
+.portfolio-card-large > span {
+  z-index: 1; /* Place the text above the background */
+  text-decoration: none;
+  color: #dddddd;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  position: relative;
+  text-decoration: none;
+  padding-top: 10px;
+  width: 80%;
+}
+
+#waxworksCard {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.32);
+  background-image: url(./img/waxworks/ww_discover.png);
+}
+
+#clartezaCard {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.35);
+  background-image: url(./img/clarteza/clarteza-home.png);
+}
+
+#casayaCard {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.35);
+  background-image: url(./img/casaya/casaya_home.png);
+}
+
+#movieListCard {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.35);
+  background-image: url(./img/movie_list/ML_home.png);
+}
+
+/* my-works */
 dialog::backdrop {
   background-color: rgba(0, 0, 0, 0.75);
 }
 
-.modal {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.my-work {
+  margin: 0 auto;
   min-width: 850px;
-  width: 80%;
-  height: 85%;
+  width: 75%;
+  height: 90%;
   border-radius: 1em;
 }
 
-.modal-header {
+.my-work-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -486,58 +518,36 @@ dialog::backdrop {
   border-bottom: 1px solid #ccc;
 }
 
-.modal-header-content > h3 {
+.my-work-header-content > h3 {
   font-size: 24px;
   font-weight: 700;
 }
 
-.modal-header-content > p {
+.my-work-header-content > p {
   font-size: 16px;
   margin: 15px 0;
   font-family: 'Montserrat', sans-serif;
 }
 
-.openBtn {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 18px;
-  font-weight: 500;
-  transition: 0.3s ease-in-out;
-}
-
-.openBtn:hover {
-  background-color: #FDB827;
-}
-
-.closeBtn {
-  position: absolute;
-  top: 20px;
-  right: 15px;
-  background-color: #fff;
-  border: none;
-  cursor: pointer;
-}
-
-.closeBtn:hover {
-  transform: scale(1.1);
-}
-
-.modal-body {
+.my-work-body {
   display: flex;
   justify-content: space-between;
 }
 
-.modal-body-content {
+.my-work-body-content {
   max-width: 35%;
   font-family: 'Montserrat', sans-serif;
   margin-left: 70px;
+  display: flex;
+  flex-direction: column  ;
 }
 
-.modal-body-content > h4 {
+.my-work-body-content > h4 {
   margin-bottom: 10px;
   font-weight: 600;
 }
 
-.modal-body-content > p {
+.my-work-body-content > p {
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -546,11 +556,11 @@ dialog::backdrop {
   margin-bottom: 20px ;
 }
 
-.modal-body-graphic {
+.my-work-body-graphic {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 60%;
+  width: 90%;
 }
 
 .btn-github{
@@ -564,10 +574,11 @@ dialog::backdrop {
   transition: 0.3s ease-in-out;
   letter-spacing: 0.125em;
   background-color: #fff;
-  margin-bottom: 20px;
   cursor: pointer;
   font-family: 'Montserrat', sans-serif;
-
+  margin-block: 40px;
+  width: 70%;
+  text-align: center;
 }
 
 .btn-github:hover {
@@ -579,25 +590,25 @@ dialog::backdrop {
   color: #fff;
 }
 
-.modal-body_tech-used {
+.my-work-body_tech-used {
   font-family: 'Montserrat', sans-serif;
   position: absolute;
   top: auto;
   max-width: 40%;
 }
 
-.modal-body_tech-used > h4 {
+.my-work-body_tech-used > h4 {
   margin-bottom: 10px;
   font-weight: 600;
 }
 
-.modal-body_tech-used-skills {
+.my-work-body_tech-used-skills {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
 }
 
-.modal-body_tech-used-skills > p {
+.my-work-body_tech-used-skills > p {
   border: 1px solid #000;
   border-radius: 13px;
   padding: 2px 10px;
@@ -605,14 +616,14 @@ dialog::backdrop {
   font-size: 12px;
 }
 
-/* MODAL SLIDESHOW */
+/* MY WORK SLIDESHOW */
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 600px;
+  max-width: 700px;
   position: relative;
   margin-inline: 40px;
-  min-height: 450px;
+  min-height: 400px;
 }
 
 /* Hide the images by default */
@@ -626,7 +637,7 @@ dialog::backdrop {
   position: absolute;
   top: 50%;
   width: auto;
-  margin-top: -22px;
+  margin-top: 150px;
   padding: 16px;
   color: #FDB827;
   font-weight: bold;
@@ -694,17 +705,18 @@ dialog::backdrop {
     font-size: 60px;
   }
 
+  .my-work-top > h1 {
+    font-size: 60px;
+  }
+
   /* Dialog backdrop */
   dialog::backdrop {
     background-color: rgba(0, 0, 0, 0.75);
   }
 
-  /* Modal */
-  .modal {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  /* my-work */
+  .my-work {
+    margin: 0 auto;
     width: 90%;
     height: 80%;
     border-radius: 1em;
@@ -712,7 +724,7 @@ dialog::backdrop {
     min-width: 300px;
   }
 
-  .modal-header {
+  .my-work-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -723,12 +735,12 @@ dialog::backdrop {
   }
 
   /* Adjust font sizes and margins for smaller screens */
-  .modal-header-content > h3 {
+  .my-work-header-content > h3 {
     font-size: 20px;
     font-weight: 700;
   }
 
-  .modal-header-content > p {
+  .my-work-header-content > p {
     font-size: 14px;
     margin: 10px 0;
   }
@@ -738,36 +750,36 @@ dialog::backdrop {
     /* Other styles as needed */
   }
 
-  .modal-body {
+  .my-work-body {
     /* Adjust layout for smaller screens */
     display: block;
   }
 
-  .modal {
+  .my-work {
     /* Adjust min-width for smaller screens */
     min-width: 250px;
   }
 
-  .modal-body-content {
+  .my-work-body-content {
     /* Adjust max-width and margin for smaller screens */
     max-width: 90%;
     margin: 0 auto;
   }
 
-  .modal-body-content > h4 {
+  .my-work-body-content > h4 {
     /* Adjust font-size and margins for smaller screens */
     font-size: 18px;
     margin-bottom: 8px;
   }
 
-  .modal-body-content > p {
+  .my-work-body-content > p {
     /* Adjust font-size, line-height, and margins for smaller screens */
     font-size: 12px;
     line-height: 1.4rem;
     margin-bottom: 10px;
   }
 
-  .modal-body-graphic {
+  .my-work-body-graphic {
     /* Adjust width for smaller screens */
     width: 100%;
   }
@@ -778,24 +790,24 @@ dialog::backdrop {
     padding: 8px 18px;
   }
 
-  .modal-body_tech-used {
+  .my-work-body_tech-used {
     /* Adjust max-width and margin for smaller screens */
     max-width: 100%;
     margin: 20px auto;
     position: relative;
     bottom: 0;
     left: 0;
-
   }
 
-  .modal-body_tech-used > h4 {
+  .my-work-body_tech-used > h4 {
     /* Adjust font-size and margins for smaller screens */
     font-size: 18px;
     margin-bottom: 8px;
   }
 
   .slideshow-container {
-    min-height: 350px;
+    min-height: 250px;
+    margin-inline: 5px;
   }
 
   .portfolio-grid {
@@ -804,8 +816,34 @@ dialog::backdrop {
     width: 50%;
     gap: 50px;
   }
+
+  .prev, .next {
+    margin-top: 75px;
+  }
+
   /* The rest of the styles remain the same */
 
+}
+
+@media (max-width: 760px) {
+  .portfolio-grid-large {
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: none;
+    width: 50%;
+    gap: 50px;
+  }
+
+  .portfolio-card-large {
+    height: 250px;
+  }
+
+  .portfolio-card-large > a {
+    font-size: 30px;
+  }
+
+  .portfolio-card-large > span {
+    font-size: 14px;
+  }
 }
 
 
@@ -906,59 +944,28 @@ dialog::backdrop {
   margin-bottom: 20px;
 }
 
-/* Hide regular navbar list on small screens */
-@media (max-width: 600px) {
-  .navbar_list {
-    display: none;
-  }
 
-  /* Show the toggle button */
-  .navbar_toggle-button {
-    display: block;
-    width: 50px;
-  }
+/* ////////////
+///MY WORK/////
+//////////// */
 
-  /* Hide the dropdown menu initially */
-  .navbar_dropdown {
-    display: none;
-  }
-
-  .dropdown {
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-    position: fixed;
-    top: 7px;
-    right: 10px;
-  }
-
-  /* Show the dropdown menu when the button is clicked */
-  .navbar_dropdown.show {
-    display: block;
-    overflow: visible;
-    background-color: #fff;
-  }
-
-  .navbar_list-item:nth-child(n + 1) {
-    margin-inline: 5px;
-
-    margin-block: 5px;
-  }
+.my-work-gray {
+  background-color: #F1F1F1;
+  width: 100vw;
+  height: auto;
+  padding-block: 60px;
 }
 
-/* Show regular navbar list on larger screens */
-@media screen and (min-width: 601px) {
-  .navbar_list {
-    display: flex;
-  }
+.my-work-white {
+  background-color: #fff;
+  width: 100vw;
+  height: auto;
+  padding-block: 60px;
+}
 
-  /* Hide the toggle button */
-  .navbar_toggle-button {
-    display: none;
-  }
-
-  /* Hide the dropdown menu */
-  .navbar_dropdown {
-    display: none;
-  }
+.my-work-darkgray {
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100vw;
+  height: auto;
+  padding-block: 60px;
 }
