@@ -59,3 +59,9 @@ details[open] .detail-body{animation:machine-arrive .5s ease both}
 .system:before{top:0;left:0;width:34px;height:3px;background:#7eacc4;opacity:1;transform:none;offset-path:rect(1px calc(100% - 1px) calc(100% - 1px) 1px);offset-anchor:center;offset-rotate:auto;offset-distance:0%;animation:steel-perimeter 14s linear infinite;animation-delay:0s;animation-play-state:paused}
 .system.motion-visible:before{animation-play-state:running}
 @media(prefers-reduced-motion:reduce){.system:before{display:none;animation:none}}
+
+/* Compact proof points stay visible before the case-study disclosures. */
+.case-results{display:flex;flex-wrap:wrap;gap:16px 24px;list-style:none;padding:20px 0 0;margin:22px 0 0;border-top:1px solid var(--line)}
+.case-results li{flex:1 1 90px;color:var(--muted);font:12px/1.5 Arial,Helvetica,sans-serif;overflow-wrap:anywhere}
+.case-results strong{display:block;color:var(--text);font:32px/1.2 Impact,'Arial Narrow',sans-serif;margin-bottom:4px}
+@media(max-width:740px){.hero-grid>*,.case-grid>*,.about-grid>*{min-width:0}.hero-footer{flex-wrap:wrap}.case-results{gap:14px}.case-results li{flex-basis:80px}.system-top{flex-wrap:wrap}.system small{font-size:10px}.system p,.outputs p{font-size:11px}.system-top,.system-bottom,.art-label,.art-foot{font-size:10px;line-height:1.6}.pipeline small{font-size:11px}.ai-art{gap:6px;padding:12px}.ai-art div{font-size:10px;padding:12px 6px}.case-meta{flex-wrap:wrap}}

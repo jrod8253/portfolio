@@ -969,3 +969,14 @@ dialog::backdrop {
   height: auto;
   padding-block: 60px;
 }
+
+/* Keep the preserved project archive fluid at tablet/mobile widths. */
+body{width:100%;overflow-wrap:break-word}
+.my-work-gray,.my-work-white,.my-work-darkgray{width:100%}
+.my-work{min-width:0;max-width:1180px;width:90%}
+.my-work-body>*,.my-work-body-content,.my-work-body-graphic{min-width:0}
+.slideshow-container{width:100%;max-width:700px}
+@media(max-width:900px){.my-work-body{display:block}.my-work-body-content{max-width:100%;margin:0 20px}.my-work-body-graphic{width:100%}.slideshow-container{width:calc(100% - 40px);margin:20px}.my-work-body_tech-used{position:static;max-width:100%;margin-bottom:20px}.my-work-top>h1{font-size:clamp(32px,7vw,60px)}}
+@media(max-width:599px){.my-work{width:94%;min-width:0}.my-work-header{width:94%}.my-work-body-content{margin:0 10px}.my-work-body-content>p{font-size:14px}.slideshow-container{width:calc(100% - 20px);margin:20px 10px}.text{position:static;padding:12px 0}.prev,.next{top:35%;margin-top:0}.btn-github{width:auto;max-width:100%;font-size:14px;letter-spacing:.04em}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.fade{animation:none}}
+a:focus-visible,button:focus-visible{outline:3px solid #202020;outline-offset:3px}

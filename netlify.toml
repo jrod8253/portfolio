@@ -1,3 +1,10 @@
 [build]
   command = "node build.mjs"
   publish = "dist"
+
+# Force the canonical homepage even though index.html is a real static file.
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+  force = true
